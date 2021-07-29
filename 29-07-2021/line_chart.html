@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Line Chart</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+</head>
+<body>
+<!-- container -->
+<canvas id="myChart" style="width:100%;max-width: 900px;"></canvas>
+
+<!--  600px it wont exceed more than that -->
+
+<script type="text/javascript">
+	//x -axis values
+	//y-axis values
+	//  line bar pie scatter plot
+	var xValues=[100,200,300,400,500,600,700,800,900,1000];
+	var yValues=[860,1140,1060,1070,1110,1330,2210,7830,478];
+    var yValues1=[875,1125,1070,1256,1289,345,267,376,456];
+    var yValues2=[900,1135,1090,1289,1269,445,367,476,656];
+    new Chart("myChart",{
+    	type:"line",
+    	data:{
+    		//  we are giving outside bcoz if we have multiple lines in the same graph
+    		// then x values are some only y values will be changed
+    		labels:xValues,  
+    		datasets:[{
+    			label:"RED",
+    			borderColor:"red",
+    			backgroundColor:"Blue",
+    			data:yValues,
+    			fill:false
+    		},
+    		{
+    			label:"Green",
+    			borderColor:"Green",
+    			backgroundColor:"yellow",
+    			data:yValues1,
+    			fill:false
+    		},
+    		{
+    			label:"Blue",
+    			borderColor:"blue",
+    			backgroundColor:"yellow",
+    			data:yValues2,
+    			fill:false
+    		}
+
+
+    		]
+    	}
+    });
+
+</script>
+</body>
+</html>
